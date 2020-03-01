@@ -1,27 +1,39 @@
 <template>
-  <div id="app">
-    <SkiChart msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-card color="grey lighten-4" flat height="100px">
+        <v-toolbar :color='primary' :dark='true'>
+          <v-app-bar-nav-icon></v-app-bar-nav-icon>
+          <v-toolbar-title>Ski Chart</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn icon>
+            <v-icon>mdi-bluetooth</v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon>mdi-content-save-settings</v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </v-toolbar>
+      </v-card>
+    <v-content>
+      <SkiChart/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import SkiChart from './components/SkiChart.vue'
+import SkiChart from './components/SkiChart';
 
 export default {
   name: 'App',
-  components: {
-    SkiChart
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    SkiChart,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
